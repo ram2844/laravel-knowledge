@@ -40,3 +40,26 @@ public function getLastSubmissionAttribute($value)
 
 $tender->last_submission                    = $request->last_submission;
 
+
+
+<!-- controller code if date not select then insert today date  -->
+
+
+$technical_documents->upload_date = $request->input('upload_date') ?? now();
+
+
+<!-- controller code if date not select then insert today date  -->
+
+public function setUploadDateAttribute($value)
+{
+    $this->attributes['upload_date'] = $value ? \Carbon\Carbon::parse($value)->format('Y-m-d') : now()->format('Y-m-d');
+}
+ or 
+
+public function setUploadDateAttribute($value)
+{
+    // If a date is selected in the request, use that date; otherwise, use today's date
+    $selectedDate = $value ? \Carbon\Carbon::parse($value)->format('Y-m-d') : now()->format('Y-m-d');
+    $this->attributes['upload_date'] = $selectedDate;
+}
+
