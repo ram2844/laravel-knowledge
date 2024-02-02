@@ -1,0 +1,1 @@
+UPDATE `cities` SET `country_id` = '99' WHERE `country_id` = '1';
