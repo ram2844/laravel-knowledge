@@ -11,3 +11,13 @@
 	    }).buttons().container().appendTo('#example_wrapper .col-md-6:eq(0)');
 	});
 	</script>
+
+
+
+	<!-- datatable manupulation -->
+
+
+	var table = $("table#document_table_"+download_type_id);
+    table.DataTable().destroy();
+    table.find('.getInkProfiles').html(html);
+    table.DataTable();

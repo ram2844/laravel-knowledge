@@ -21,6 +21,7 @@ https://heimdall.protondns.net:2083/logout/?locale=en
 Username: colorjetdemoserv
 Password: 9b@}m1+E7&YH
 Path: cd isspa.demoserver.co.in
+cd backend
 
 Goto terminal
 cmd: cd public_html/
