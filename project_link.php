@@ -87,3 +87,6 @@ office git
 https://github.com/
 
 password- Shivam@123#123
+
+developer@techmistriz.com
+tec123##
